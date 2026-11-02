@@ -1,0 +1,21 @@
+<!-- @dsCard group="War Room RBAC" viewport="1280x800" name="War Room · Access console" subtitle="Roles, capability matrix, delegations, signing keys, audit log" -->
+<!doctype html>
+<html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Election-COS · Access</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../components/ecos-loader.js"></script>
+<script>window.NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Button && v.RoleBadge) return v; } catch (e) {} } return {}; })();</script>
+<script src="data.js"></script>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="page-header.jsx"></script>
+<script type="text/babel" src="roles-screen.jsx"></script>
+<script type="text/babel" src="matrix-screen.jsx"></script>
+<script type="text/babel" src="delegations-screen.jsx"></script>
+<script type="text/babel" src="keys-screen.jsx"></script>
+<script type="text/babel" src="audit-screen.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+</body></html>

@@ -1,0 +1,23 @@
+:root {
+  --font-display: "Archivo", "Public Sans", system-ui, sans-serif;
+  --font-body: "Public Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --weight-display: 700;
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-mono-medium: 500;
+
+  /* Desktop type scale — size / line-height (Protocol p.6) */
+  --text-h1: 48px;   --lh-h1: 52px;
+  --text-h2: 32px;   --lh-h2: 36px;
+  --text-h3: 24px;   --lh-h3: 30px;
+  --text-h4: 18px;   --lh-h4: 24px;
+  --text-body: 16px; --lh-body: 26px;
+  --text-small: 14px; --lh-small: 23px;
+  --text-caption: 12px; --lh-caption: 20px;
+  --text-code: 14px; --lh-code: 22px;
+  --lh-ratio: 1.65;
+  --tracking-display: -0.01em;
+  --tracking-label: 0.08em;   /* uppercase system labels: BUILT, ROADMAP */
+}

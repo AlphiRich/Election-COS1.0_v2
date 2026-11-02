@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="700x420" name="Navigation" subtitle="Ink War Room rail, Paper app bar, underline tabs" -->
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../components/ecos-loader.js"></script>
+</head><body style="padding:24px;background:var(--paper)">
+<div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Button && v.RoleBadge) return v; } catch (e) {} } return {}; })();
+
+const { SideNav, AppBar, Tabs, CodeTag, StatusBadge } = NS;
+function Demo(){ const [v,setV]=React.useState('roles'); const [t,setT]=React.useState('active'); return (
+<div style={{display:'grid',gridTemplateColumns:'220px 1fr',height:372,border:'1px solid var(--line)',margin:-24}}>
+  <SideNav value={v} onChange={setV} sections={[{title:'War Room',items:[{value:'overview',label:'Overview',icon:'squares-four'},{value:'wards',label:'Wards',icon:'map-trifold'}]},{title:'Access',items:[{value:'roles',label:'Roles',icon:'users-three'},{value:'deleg',label:'Delegations',icon:'handshake',meta:'47'},{value:'keys',label:'Signing keys',icon:'key'}]}]} />
+  <div>
+    <AppBar crumbs={['Settings','Access']} title="Delegations" right={<><StatusBadge status="built">Synced</StatusBadge><CodeTag>NW405</CodeTag></>} />
+    <div style={{padding:'16px 24px'}}><Tabs value={t} onChange={setT} tabs={[{value:'active',label:'Active',count:47},{value:'expiring',label:'Expiring',count:6},{value:'revoked',label:'Revoked',count:11}]} /></div>
+  </div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>
