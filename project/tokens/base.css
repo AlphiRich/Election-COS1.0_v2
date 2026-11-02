@@ -1,0 +1,13 @@
+html, body { margin: 0; background: var(--surface-page); color: var(--text-primary); }
+body { font-family: var(--font-body); font-size: var(--text-body); line-height: var(--lh-ratio); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: var(--weight-display); letter-spacing: var(--tracking-display); margin: 0; text-wrap: balance; }
+h1 { font-size: var(--text-h1); line-height: var(--lh-h1); }
+h2 { font-size: var(--text-h2); line-height: var(--lh-h2); }
+h3 { font-size: var(--text-h3); line-height: var(--lh-h3); }
+h4 { font-size: var(--text-h4); line-height: var(--lh-h4); }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--text-link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--ink); text-decoration-thickness: 2px; }
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.875em; }
+::selection { background: color-mix(in oklab, var(--amber) 35%, var(--paper)); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }

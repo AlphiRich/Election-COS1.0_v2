@@ -1,0 +1,15 @@
+<!-- @dsCard group="Field app" viewport="800x924" name="Field · Canvasser authorisation" subtitle="Offline token, scoped household list, POPIA capture, revocation on sync" -->
+<!doctype html>
+<html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Election-COS · Field</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../components/ecos-loader.js"></script>
+<script>window.NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Button && v.RoleBadge) return v; } catch (e) {} } return {}; })();</script>
+<script src="field-data.js"></script>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="field-app.jsx"></script>
+</body></html>

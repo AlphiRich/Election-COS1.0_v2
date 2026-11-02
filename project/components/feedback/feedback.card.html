@@ -1,0 +1,30 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Feedback" subtitle="Alerts (no red — Ink critical), toast, dialog, tooltip" -->
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../components/ecos-loader.js"></script>
+</head><body style="padding:24px;background:var(--paper)">
+<div id="root"></div>
+<script type="text/babel">
+const NS = (() => { for (const k of Object.keys(window)) { try { const v = window[k]; if (v && typeof v === 'object' && v.Button && v.RoleBadge) return v; } catch (e) {} } return {}; })();
+
+const { Alert, Toast, Dialog, Tooltip, Button, IconButton, CodeTag } = NS;
+function Demo(){ return (
+<div style={{display:'flex',flexDirection:'column',gap:12}}>
+  <Alert tone="info" title="Offline mode">Actions verify against your signed token and sync when signal returns.</Alert>
+  <Alert tone="success" title="Seed reconciled">6 of 6 roles referenced by RLS policies exist in the role table.</Alert>
+  <Alert tone="warning" title="Token expires in 42 min" action={<Button size="sm" variant="outline">Re-issue</Button>}>Reconnect before your next shift.</Alert>
+  <Alert tone="critical" title="Signing key retired">3 devices still hold tokens signed with <CodeTag inverse>ecos-2026-10</CodeTag>.</Alert>
+  <div style={{display:'flex',gap:24,alignItems:'flex-start',marginTop:8}}>
+    <Dialog inline width={340} kicker="Ward NW405-W07" title="Revoke delegation?" onClose={()=>{}} actions={<><Button variant="outline" size="sm">Cancel</Button><Button variant="destructive" size="sm">Revoke</Button></>}>The canvasser's cached token stays valid until expiry; revocation is enforced on next sync.</Dialog>
+    <div style={{display:'flex',flexDirection:'column',gap:48,paddingTop:44}}>
+      <Toast tone="success" actionLabel="View log">Delegation granted · logged #4821</Toast>
+      <Tooltip open tip="Delegation is one level only"><IconButton icon="info" label="About" variant="outline" /></Tooltip>
+    </div>
+  </div>
+</div>);}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script></body></html>

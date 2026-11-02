@@ -1,0 +1,27 @@
+:root {
+  /* 4px base step */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+
+  /* Layout systems (Protocol §4) */
+  --grid-columns: 12;
+  --grid-max: 1200px;
+  --grid-gutter: 24px;
+  --touch-target: 48px;       /* Field (mobile) minimum */
+  --control-height: 40px;     /* War Room (desktop) controls */
+  --control-height-sm: 32px;
+
+  /* Civic document: near-square corners, hairline edges, almost no shadow */
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-pill: 999px;
+  --border-hair: 1px solid var(--line);
+  --border-rule: 2px solid var(--ink);
+  --shadow-1: 0 1px 0 var(--line);
+  --shadow-2: 0 1px 2px color-mix(in oklab, var(--ink) 10%, transparent), 0 4px 12px color-mix(in oklab, var(--ink) 6%, transparent);
+  --shadow-3: 0 2px 4px color-mix(in oklab, var(--ink) 12%, transparent), 0 16px 40px color-mix(in oklab, var(--ink) 14%, transparent);
+
+  --ease: cubic-bezier(.2,.6,.2,1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+}
